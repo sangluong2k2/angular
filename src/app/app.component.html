@@ -1,3 +1,3 @@
 <app-header></app-header>
-<app-hello></app-hello>
-<router-outlet></router-outlet>
+<app-products [data]="productList"></app-products>
+<app-add-product (onAdd)="onHandleAdd($event)"></app-add-product>

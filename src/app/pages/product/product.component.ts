@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from 'src/app/models/Product';
 
 @Component({
   selector: 'app-product',
@@ -24,7 +25,7 @@ export class ProductComponent implements OnInit {
     status: true
   }
 
-  productList: { id: number, name: string, price: number, status: boolean }[] = [
+  productList: IProduct[] = [
     {
       id: 1,
       name: "product A",
@@ -37,7 +38,8 @@ export class ProductComponent implements OnInit {
       price: 200,
       status: false
     }
-  ]
+  ];
+  product!: { id: number; name: string; price: number; status: boolean; };
 
   onHandleClick() {
     this.productStatus = !this.productStatus
@@ -52,7 +54,7 @@ export class ProductComponent implements OnInit {
     this.title = event.target.value
   }
   onHandleAdd(){
-
+    this.productList.push(this.product)
   }
   
 
