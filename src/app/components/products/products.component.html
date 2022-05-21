@@ -17,8 +17,9 @@
         <td>{{product.name}}</td>
         <td>{{product.price}}</td>
         <td>{{product.status ? "Còn hàng " : "Hết hàng"}}</td>
-        <td><button >info</button>
-        <a routerLink="/product/{{product.id}}">Detail</a>
+        <td><button  >info</button>
+        <a routerLink="/product/{{product.id}}">Detail</a> | 
+        <a routerLink="/product/{{product.id}}/edit">edit</a>
         <button (click)="onRemoveProduct(product.id)" >Xóa</button>
         </td>
         <td><button ><a href="/products/add">Thêm</a></button></td>

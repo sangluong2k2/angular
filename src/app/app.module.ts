@@ -12,6 +12,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { AddProductComponent } from './components/add-product/add-product.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     AddProductComponent,
     HomepageComponent,
     ProductDetailComponent,
+    EditProductComponent,
   ],
   imports: [
     BrowserModule,

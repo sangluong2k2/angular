@@ -13,7 +13,10 @@
       "status": false
     },
     {
-      "id": 3
+      "name": "sản phẩm 1",
+      "price": 1111,
+      "id": 4,
+      "status": false
     }
   ]
 }
