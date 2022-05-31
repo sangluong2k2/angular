@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product.services';
 
@@ -17,7 +17,8 @@ export class AddProductComponent implements OnInit {
   }
   constructor(
     private productServices: ProductService,
-    private router:ActivatedRoute
+    private router:ActivatedRoute,
+    private routes: Router
     ) {
 
    }
@@ -27,7 +28,8 @@ export class AddProductComponent implements OnInit {
 
   onSubmit(){
    this.productServices.addProduct(this.product).subscribe(data => {
-     console.log(data);
+     this.product = data;
+      this.routes.navigate([''])
      
    })
    

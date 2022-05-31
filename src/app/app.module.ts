@@ -13,6 +13,12 @@ import { AddProductComponent } from './components/add-product/add-product.compon
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { EditProductComponent } from './components/edit-product/edit-product.component';
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+
+
+
+registerLocaleData(en);
 
 
 @NgModule({
